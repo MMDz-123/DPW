@@ -18,6 +18,11 @@ header h1{
     font-size: 1.4rem;
 }
 
+section h2{
+    margin-bottom: 1rem;
+    color: #1d5b8a;
+}
+
 header nav ul{
     list-style: none;
     display: flex;
