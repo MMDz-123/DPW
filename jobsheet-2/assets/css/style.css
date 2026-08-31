@@ -96,3 +96,36 @@ th, td{
     padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e2e6ee;
 }
+
+thead{
+    background-color: #1d5b8a;
+    color: #fff;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f7f9fb;
+}
+
+tbody tr:hover{
+    background-color: #eef4fa;
+}
+
+td button{
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-size: 0.85rem
+}
+
+td button:first-of-type{
+    background-color: #fce1bd;
+    color: #1d5b8a;
+}
+
+td button:last-of-type{
+    background-color: #d9534f;
+    color: #fff;
+}
