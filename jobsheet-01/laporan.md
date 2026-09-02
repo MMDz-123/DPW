@@ -125,3 +125,20 @@ Berisi form pengisian buku menggunakan `<form>` dan `<input>`
 </p>
 ```
 - `<label for="abd">ABC</label>` Keterangan "ABC" yang akan ditampilkan. Atribut `for="abc" 
+
+### `<select>` untuk dropdown
+```html
+        <p>
+            <label for="kategori">Kategori</label><br>
+            <select name="kategori" id="kategori">
+                <option value=""></option>
+                <option value="fiksi">Fiksi</option>
+                <option value="nin-Fiksi">Non-Fiksi</option>
+                <option value="referensi">Referensi</option>
+            </select>
+        </p>
+```
+
+- `<select>` untuk seluruh menu *dropdown*
+- `<option>` menandakan setiap pilihan yang didaftarkan, berisi nilai yang akan diproses (`value`) dan teks yang akan ditampilkan. Nilai `value` dan teks tidak harus sama namun disarankan untuk disamakan agar konsistensi terjaga.
+- `<option value=""></option>` pada nilai pertama sengaja dikosongkan sebagai nilai default karena pada pilihan tidak ada `required` dan pilihan secara default memilih pilihan pertama
