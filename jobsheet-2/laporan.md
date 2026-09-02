@@ -71,3 +71,98 @@ section {
 }
 ```
 pada bagian `box-shadow` kode warna tidak menggunakan kode *hexadecimal* tetapi menggunakan kode rgba. Mirip seperti *hexadecimal* tetapi dengan tambahan `a` yaitu *alpha* atau transparansi sehingga bayangan tidak terlihat hitam pekat
+
+## Kartu Statistik
+Selain *flexbox*, css grid adalah salah satu sistem layout untuk menyusun elemen css.
+
+```css
+main section:nth-of-type(2){
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    gap: 1rem;
+}
+
+main section:nth-of-type(2) article{
+    background-color: #eef4fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+main section:nth-of-type(2) article h3{
+font-size: 1rem;
+color: #293541;
+margin-bottom: 0.5rem;
+}
+
+main section:nth-last-of-type(2) article p{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1d5b8a;
+}
+```
+
+- `nth-of-type(2)` memilih elemen dengan urutan ke-2 diantara semua elemen di `<section>`. Dengan `main` maka yang diambil adalah section kedua yang ada di dalam `main`
+- `grid-template-columns: repeat(3, 1fr)` tiga kolom dengan lebar masing-masing 1fr (bagian pecahan dari ruang yang ada)
+
+## Tabel
+```css
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #e2e6ee;
+}
+
+thead{
+    background-color: #1d5b8a;
+    color: #fff;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f7f9fb;
+}
+
+tbody tr:hover{
+    background-color: #eef4fa;
+}
+
+td button{
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-size: 0.85rem
+}
+
+td button:first-of-type{
+    background-color: #fce1bd;
+    color: #1d5b8a;
+}
+
+td button:last-of-type{
+    background-color: #d9534f;
+    color: #fff;
+}
+```
+
+### Lebar Tabel
+- `width: 100%` tabel menempati seluruh kotak yang ditempati
+- Secara default, garis pembatas tampak dua garis sejajar. `border-collapse: collapse` menggabungkan dua garis sejajar tersebut menjadi satu agar terlihat lebih rapi
+
+### Sel Header dan Data
+- Sel header dan data menggunakan aturan yang sama sehingga *selector* langsung digabung dengan koma
+- Karena `<th>` secara default menerapkan teks rata tengah, `text-align: left;` digunakan untuk "memaksa" tabel menggunakan teks rata kiri 
+- Setiap garis di bawah sel diberi garis abu muda dengan `border-bottom: 1px solid #e2e6ea;`
+
+### Header tabel
+- Kepala tabel diberi warna biru polinema `#1d5b8a` dengan teks bewarna putih
+
+### Baris selang-seling dan Efek Saat Hover
+- `tbody tr:nth-child(even)` merujuk pada baris genap saja dan diberi warna abu muda sehingga tabel terlihat seperti kulit zebra. Hal ini dapat membantu pengguna membaca tabel tanpa "tersasar" ke baris lain
+- Ketika kursor diarahkan ke salah satu baris, warna latar belakang baris tersebut menjadi biru pudar sehingga pengguna dapat melihat baris mana yang sedang disorot
